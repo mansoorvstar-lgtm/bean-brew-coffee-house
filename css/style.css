@@ -74,74 +74,54 @@ img {
 /* MOBILE HAMBURGER MENU */
 /* ============================= */
 
+/* Hamburger Menu */
 #menu-toggle {
     display: none;
 }
 
 .hamburger {
     display: none;
-    width: 42px;
-    height: 42px;
     cursor: pointer;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 5px;
 }
 
 .hamburger span {
-    display: block;
-    width: 27px;
+    width: 25px;
     height: 3px;
-    background: var(--brown);
-    border-radius: 3px;
+    background: #333;
+    display: block;
 }
 
+/* Mobile Menu */
+@media (max-width: 768px) {
 
-/* ============================= */
-/* MOBILE VIEW */
-/* ============================= */
-
-@media (max-width: 600px) {
-
-    .nav-wrap {
-        min-height: 68px;
-        position: relative;
-        flex-direction: row;
+    .nav-container {
+        display: flex;
         align-items: center;
-        flex-wrap: wrap;
-        padding: 12px 0;
-    }
-
-    .logo {
-        font-size: 1.35rem;
+        justify-content: space-between;
     }
 
     .hamburger {
         display: flex;
-        margin-left: auto;
     }
 
-    .nav-wrap nav {
+    nav {
         display: none;
         width: 100%;
         flex-direction: column;
-        gap: 4px;
-        margin-top: 10px;
-    }
-
-    .nav-wrap nav a {
-        display: block;
-        width: 100%;
         text-align: center;
-        padding: 10px;
-        border-radius: 8px;
     }
 
-    /* Show menu when hamburger is clicked */
     #menu-toggle:checked ~ nav {
         display: flex;
     }
+
+    nav a {
+        padding: 12px;
+        display: block;
+    }
+}
 
 }
 .hero .eyebrow,
