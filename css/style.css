@@ -75,3 +75,56 @@ img {
 .hero p {
     color: #fff;
 }
+/* Hamburger Menu */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--brown);
+    border-radius: 3px;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+
+    .nav-wrap {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-wrap nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .nav-wrap nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+    }
+}
