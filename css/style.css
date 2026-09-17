@@ -70,39 +70,51 @@ img {
     display: block;
     border-radius: 12px;
 }
-.hero .eyebrow,
-.hero h1,
-.hero p {
-    color: #fff;
-}
-/* Hamburger Menu */
+/* ============================= */
+/* MOBILE HAMBURGER MENU */
+/* ============================= */
+
 #menu-toggle {
     display: none;
 }
 
 .hamburger {
     display: none;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
 }
 
 .hamburger span {
     display: block;
-    width: 28px;
+    width: 27px;
     height: 3px;
     background: var(--brown);
     border-radius: 3px;
 }
 
-/* Mobile View */
+
+/* ============================= */
+/* MOBILE VIEW */
+/* ============================= */
+
 @media (max-width: 600px) {
 
     .nav-wrap {
+        min-height: 68px;
         position: relative;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 1.35rem;
     }
 
     .hamburger {
@@ -114,17 +126,21 @@ img {
         display: none;
         width: 100%;
         flex-direction: column;
-        gap: 5px;
+        gap: 4px;
         margin-top: 10px;
     }
 
     .nav-wrap nav a {
+        display: block;
         width: 100%;
         text-align: center;
         padding: 10px;
+        border-radius: 8px;
     }
 
+    /* Show menu when hamburger is clicked */
     #menu-toggle:checked ~ nav {
         display: flex;
     }
+
 }
