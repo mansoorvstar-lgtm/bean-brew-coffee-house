@@ -144,3 +144,8 @@ img {
     }
 
 }
+.hero .eyebrow,
+.hero h1,
+.hero p {
+    color: #fff;
+}
